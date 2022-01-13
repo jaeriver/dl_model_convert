@@ -15,7 +15,7 @@ def make_dataset(batch_size,size):
 
     return data,image_shape
 
-data, image_shape = make_dataset(1, 224)
+data, image_shape = make_dataset(10, 224)
   
 session = ort.InferenceSession(onnx_model)
 
