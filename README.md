@@ -14,7 +14,7 @@ pip install -U tf2onnx
 python -m tf2onnx.convert \
         --saved-model ./tf_saved_model \
         --output ./converted_model.onnx \
-        --opset 7
+        --opset 13
 ```
 
 ## Validate converted ONNX model
