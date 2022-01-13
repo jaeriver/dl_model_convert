@@ -1,20 +1,20 @@
 import tensorflow as tf
 from tensorflow.keras.applications import ( 
-    xception,
-    vgg16,
-    vgg19,
-    resnet,
-    resnet50,
-    resnet_v2,
-    inception_v3,
-    inception_resnet_v2,
+#     xception,
+#     vgg16,
+#     vgg19,
+#     resnet,
+#     resnet50,
+#     resnet_v2,
+#     inception_v3,
+#     inception_resnet_v2,
     mobilenet,
-    densenet,
-    nasnet,
-    mobilenet_v2,
-    efficientnet
+#     densenet,
+#     nasnet,
+#     mobilenet_v2,
+#     efficientnet
 )
-model_type = 'efficientnet_b7'
+model_type = 'mobilenet'
 saved_model_dir = f'{model_type}'
 
 models = {
