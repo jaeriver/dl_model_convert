@@ -9,14 +9,13 @@ onnx_model = args.model
 
 img = np.array((1,3,640,640)).astype(np.float32)
   
-sess_ort = ort.InferenceSession(onnx_model)
+session = ort.InferenceSession(onnx_model)
 
-sess_ort.get_modelmeta()
-first_input_name = sess_ort.get_inputs()[0].name
-first_output_name = sess_ort.get_outputs()[0].name
-
+session.get_modelmeta()
+inname = [input.name for input in session.get_inputs()]
+outname = [output.name for output in session.get_outputs()]
 print(first_input_name, first_output_name)
 
-res = sess_ort.run(None, {first_input_name: img})
+res = session.run(outname, {inname: img})
 print("the expected result is \"7\"")
 print("the digit is classified as \"%s\" in ONNXRruntime"%np.argmax(res))
