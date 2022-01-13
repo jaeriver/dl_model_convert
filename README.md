@@ -12,7 +12,7 @@ pip install -U tf2onnx
 ```
 # generating mnist.onnx using saved_model
 python -m tf2onnx.convert \
-        --saved-model ./output/saved_model \
-        --output ./output/mnist1.onnx \
+        --saved-model ./tf_saved_model \
+        --output ./converted_model.onnx \
         --opset 7
 ```
