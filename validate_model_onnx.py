@@ -14,7 +14,7 @@ session = ort.InferenceSession(onnx_model)
 session.get_modelmeta()
 inname = [input.name for input in session.get_inputs()]
 outname = [output.name for output in session.get_outputs()]
-print(first_input_name, first_output_name)
+print(inname, outname)
 
 res = session.run(outname, {inname: img})
 print("the expected result is \"7\"")
