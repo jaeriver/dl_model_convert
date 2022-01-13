@@ -16,3 +16,8 @@ python -m tf2onnx.convert \
         --output ./converted_model.onnx \
         --opset 7
 ```
+
+## Validate converted ONNX model
+```
+pip install onnxruntime
+```
