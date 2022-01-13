@@ -25,5 +25,4 @@ outname = [output.name for output in session.get_outputs()]
 print(inname, outname)
 
 res = session.run(outname, {inname[0]: data})
-print("the expected result is \"7\"")
 print("the digit is classified as \"%s\" in ONNXRruntime"%np.argmax(res))
