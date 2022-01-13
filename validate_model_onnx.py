@@ -2,7 +2,7 @@ import numpy as np
 import onnxruntime as ort
 
 onnx_model = 'mobilenet.onnx'
-img = np.array([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]], dtype=numpy.float32)
+img = np.array([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]], dtype=np.float32)
   
 sess_ort = ort.InferenceSession(onnx_model)
 
