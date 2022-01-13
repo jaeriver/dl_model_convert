@@ -1,7 +1,7 @@
 import numpy as np
 import onnxruntime as ort
 
-onnx_model = 'mobilenet'
+onnx_model = 'mobilenet.onnx'
 img = np.load("./assets/image.npz").reshape([1, 784])  
 sess_ort = ort.InferenceSession(onnx_model)
 
