@@ -15,7 +15,7 @@ def make_dataset(batch_size,size):
 
     return data,image_shape
 
-data, image_shape = make_dataset(10, 224)
+data, image_shape = make_dataset(2, 224)
   
 session = ort.InferenceSession(onnx_model)
 
@@ -25,4 +25,5 @@ outname = [output.name for output in session.get_outputs()]
 print(inname, outname)
 
 res = session.run(outname, {inname[0]: data})
+print(res)
 print("the digit is classified as \"%s\" in ONNXRruntime"%np.argmax(res))
