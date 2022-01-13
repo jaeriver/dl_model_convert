@@ -14,7 +14,7 @@ from tensorflow.keras.applications import (
 #     mobilenet_v2,
 #     efficientnet
 )
-model_type = 'mobilenet'
+model_type = 'resnet50'
 saved_model_dir = f'{model_type}'
 
 models = {
