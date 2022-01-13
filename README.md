@@ -6,7 +6,7 @@ Convert(or compile) Deep Learning Models using ONNX, TVM
 
 ## Install TF-ONNX
 ```
-pip install tensorflow-onnx
+pip install -U tf2onnx
 ```
 ## Convert TF to ONNX
 ```
