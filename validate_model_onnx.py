@@ -7,7 +7,7 @@ parser.add_argument('--model',default='mobilenet-13.onnx' , type=str)
 args = parser.parse_args()
 onnx_model = args.model
 
-img = np.array([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]], dtype=np.int32)
+img = np.array([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]], dtype=np.float32)
   
 sess_ort = ort.InferenceSession(onnx_model)
 
