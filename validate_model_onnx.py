@@ -16,6 +16,6 @@ inname = [input.name for input in session.get_inputs()]
 outname = [output.name for output in session.get_outputs()]
 print(inname, outname)
 
-res = session.run(outname, {inname: img})
+res = session.run(outname, {inname[0]: img})
 print("the expected result is \"7\"")
 print("the digit is classified as \"%s\" in ONNXRruntime"%np.argmax(res))
