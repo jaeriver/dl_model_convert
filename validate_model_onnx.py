@@ -1,5 +1,6 @@
 import numpy as np
 import onnxruntime as ort
+import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--model',default='mobilenet-13.onnx' , type=str)
