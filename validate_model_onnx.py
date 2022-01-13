@@ -2,7 +2,8 @@ import numpy as np
 import onnxruntime as ort
 
 onnx_model = 'mobilenet.onnx'
-img = np.load("./assets/image.npz").reshape([1, 784])  
+img = numpy.array([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]], dtype=numpy.float32)
+  
 sess_ort = ort.InferenceSession(onnx_model)
 
 sess_ort.get_modelmeta()
